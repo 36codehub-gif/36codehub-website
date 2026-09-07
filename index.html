@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Login Modal CSS -->
     <style>
-        /* FIXED: Modal Visibility CSS */
         .auth-container { 
             display: none; 
             position: fixed; 
@@ -23,14 +23,14 @@
             justify-content: center; 
             align-items: center; 
             z-index: 99999; 
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
         }
         .auth-box { 
             background: #1e293b; 
-            padding: 2.5rem; 
+            padding: 2rem; 
             border-radius: 16px; 
             width: 90%; 
-            max-width: 400px; 
+            max-width: 380px; 
             box-shadow: 0 20px 40px rgba(0,0,0,0.6); 
             border: 1px solid #334155; 
             position: relative; 
@@ -47,15 +47,15 @@
             line-height: 1;
         }
         .auth-box h2 { 
-            margin-bottom: 1.5rem; 
+            margin-bottom: 1.2rem; 
             text-align: center; 
             color: #38bdf8; 
-            font-size: 1.5rem; 
+            font-size: 1.4rem; 
         }
         .auth-box input { 
             width: 100%; 
             padding: 0.8rem; 
-            margin-bottom: 1.2rem; 
+            margin-bottom: 1rem; 
             border-radius: 8px; 
             border: 1px solid #475569; 
             background: #0f172a; 
@@ -74,7 +74,7 @@
             font-weight: bold; 
             cursor: pointer; 
             margin-bottom: 0.8rem; 
-            font-size: 1rem; 
+            font-size: 0.95rem; 
         }
         .auth-box .signup-btn { 
             background: transparent; 
@@ -112,7 +112,7 @@
     <!-- Background Tech Grid Animation -->
     <div class="bg-grid-pattern"></div>
 
-    <!-- Top Bar -->
+    <!-- Top Announcement & Contact Bar -->
     <div class="top-bar">
         <div class="container top-container">
             <div class="top-info">
@@ -142,9 +142,9 @@
                     <li><a href="#calculator" class="nav-link">Cost Estimator</a></li>
                     <li><a href="#contact" class="btn-nav-gradient">Get Free Quote</a></li>
                     
-                    <!-- LOGIN / USER PROFILE BUTTON -->
+                    <!-- LOGIN & PROFILE SECTION -->
                     <li>
-                        <button id="openAuthBtn" class="btn-nav-auth" onclick="toggleAuthModal(true)">Login / Sign Up</button>
+                        <button id="openAuthBtn" class="btn-nav-auth" onclick="toggleAuthModal(true)">Login</button>
                         <div id="userProfileUI" class="user-status">
                             <span id="userEmailSpan" style="color: #38bdf8; font-size: 0.85rem; font-weight: 600;"></span>
                             <button class="logout-btn" onclick="logoutUser()">Logout</button>
@@ -187,30 +187,280 @@
                 <a href="#contact" class="btn-glow"><i class="fa-solid fa-rocket"></i> Launch Your Project</a>
                 <a href="#calculator" class="btn-outline"><i class="fa-solid fa-calculator"></i> Estimate Project Cost</a>
             </div>
+
+            <!-- Tech Badges Bar -->
+            <div class="hero-trust-bar">
+                <span>POWERING BUSINESSES WITH:</span>
+                <div class="trust-icons">
+                    <i class="fa-brands fa-react" title="React / React Native"></i>
+                    <i class="fa-brands fa-node-js" title="Node.js"></i>
+                    <i class="fa-brands fa-python" title="Python"></i>
+                    <i class="fa-brands fa-aws" title="AWS Cloud"></i>
+                    <i class="fa-solid fa-database" title="PostgreSQL / MongoDB"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Impact Counter -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <div class="stat-number"><span class="counter" data-target="80">0</span>+</div>
+                <p>Projects Shipped</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"><span class="counter" data-target="98">0</span>%</div>
+                <p>Client Retention Rate</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"><span class="counter" data-target="15">0</span>+</div>
+                <p>Tech Specialists</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"><span class="counter" data-target="24">0</span>/7</div>
+                <p>Dedicated Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">WHAT WE DO</span>
+                <h2>Architecting <span>Digital Excellence</span></h2>
+                <div class="glow-line"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="glass-card service-card">
+                    <div class="icon-glow"><i class="fa-solid fa-code"></i></div>
+                    <h3>Custom Web Applications</h3>
+                    <p>Scalable, high-speed SaaS products and dynamic web portals built with React, Next.js, and Node.js.</p>
+                    <a href="#contact" class="service-link">Discuss Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="glass-card service-card">
+                    <div class="icon-glow"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>Cross-Platform Mobile Apps</h3>
+                    <p>Native-feel iOS & Android mobile applications engineered using React Native & Flutter for seamless UX.</p>
+                    <a href="#contact" class="service-link">Discuss Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="glass-card service-card">
+                    <div class="icon-glow"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Enterprise ERP & CRM</h3>
+                    <p>Tailor-made internal business management systems, billing software, and operational dashboards.</p>
+                    <a href="#contact" class="service-link">Discuss Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="glass-card service-card">
+                    <div class="icon-glow"><i class="fa-solid fa-cloud-bolt"></i></div>
+                    <h3>Cloud Deployment & DevOps</h3>
+                    <p>AWS, Docker, and CI/CD pipelines setup ensuring 99.9% uptime and bulletproof security.</p>
+                    <a href="#contact" class="service-link">Discuss Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="glass-card service-card">
+                    <div class="icon-glow"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <h3>E-Commerce Ecosystems</h3>
+                    <p>High-converting online shopping platforms complete with payment gateways, inventory, and order tracking.</p>
+                    <a href="#contact" class="service-link">Discuss Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="glass-card service-card">
+                    <div class="icon-glow"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>UI/UX & Modern Re-branding</h3>
+                    <p>Intuitive user interfaces, high-converting wireframes, and modern visual design tailored for engagement.</p>
+                    <a href="#contact" class="service-link">Discuss Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Estimator Tool -->
+    <section id="calculator" class="section dark-alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">TRANSPARENT PRICING</span>
+                <h2>Instant Project <span>Cost Estimator</span></h2>
+                <div class="glow-line"></div>
+                <p>Select your requirements below to get a real-time estimated quote.</p>
+            </div>
+
+            <div class="glass-card calculator-box">
+                <div class="calc-step">
+                    <label>1. Select Platform Type:</label>
+                    <div class="calc-options" id="platformOptions">
+                        <button class="calc-btn active" data-price="15000">Web Application</button>
+                        <button class="calc-btn" data-price="25000">Mobile App (Android/iOS)</button>
+                        <button class="calc-btn" data-price="35000">Custom ERP/CRM Software</button>
+                    </div>
+                </div>
+
+                <div class="calc-step">
+                    <label>2. Add Essential Features:</label>
+                    <div class="calc-checkboxes">
+                        <label class="check-container">
+                            <input type="checkbox" class="feature-check" value="5000"> Admin Dashboard & Analytics (+₹5,000)
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-container">
+                            <input type="checkbox" class="feature-check" value="4000"> Payment Gateway Integration (+₹4,000)
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-container">
+                            <input type="checkbox" class="feature-check" value="3000"> SMS / WhatsApp API Notifications (+₹3,000)
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="calc-summary">
+                    <div class="total-display">
+                        <span>Estimated Starting Price:</span>
+                        <h3 id="estimatedTotal">₹15,000</h3>
+                    </div>
+                    <button class="btn-glow" id="sendEstimateWA"><i class="fa-brands fa-whatsapp"></i> Get Quote on WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Address Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">LET'S CONNECT</span>
+                <h2>Get In Touch With <span>36CodeHub</span></h2>
+                <div class="glow-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Details -->
+                <div class="glass-card contact-info-card">
+                    <h3>Office Headquarters</h3>
+                    <p>Have an upcoming project or need IT consultation? Drop by our office or contact us directly.</p>
+
+                    <div class="info-block">
+                        <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Adarsh Colony, Sondongri, Raipur, Chhattisgarh - 492099</p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-icon"><i class="fa-solid fa-headset"></i></div>
+                        <div>
+                            <h4>Direct Phone / WhatsApp</h4>
+                            <p><a href="tel:9111717276">+91 9111717276</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>contact@36codehub.com</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919111717276" class="btn-wa-direct" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> Chat Live With Tech Lead
+                    </a>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card contact-form-card">
+                    <h3>Send Us A Message</h3>
+                    <form id="mainContactForm">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="cName" placeholder="e.g. Rajesh Kumar" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number / Email</label>
+                            <input type="text" id="cContact" placeholder="Your Phone or Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Select Requirement</label>
+                            <select id="cService" required>
+                                <option value="">-- Choose Option --</option>
+                                <option value="Web App">Web Application</option>
+                                <option value="Mobile App">Mobile App Development</option>
+                                <option value="ERP/CRM">Enterprise ERP Software</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Project Details</label>
+                            <textarea id="cMessage" rows="4" placeholder="Share your idea or software requirements..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-glow full-width"><i class="fa-solid fa-paper-plane"></i> Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="#home" class="brand-logo">
+                    <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="logo-text">36<span>CodeHub</span></div>
+                </a>
+                <p>36CodeHub is a full-service software development company in Raipur, providing high-performance Web, Mobile & Enterprise IT solutions.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#calculator">Price Estimator</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://wa.me/919111717276" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 36CodeHub Software Company. All Rights Reserved.</p>
+            <p>&copy; 2026 36CodeHub Software Company. All Rights Reserved. | Address: Adarsh Colony, Sondongri, Raipur, Chhattisgarh</p>
         </div>
     </footer>
 
-    <!-- Supabase SDK & Javascript Logic -->
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/919111717276" class="floating-btn wa-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SUPABASE SDK INTEGRATION -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
       const SUPABASE_URL = 'https://suhjihyxyqoordyitcuv.supabase.co';
       const SUPABASE_KEY = 'sb_publishable_MJ3gmyPme6nCjR_XGt3jHA_MfOIZUJb';
       const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-      // Show/Hide Login Popup
       function toggleAuthModal(show) {
-          const modal = document.getElementById('authModal');
-          modal.style.display = show ? 'flex' : 'none';
+          document.getElementById('authModal').style.display = show ? 'flex' : 'none';
       }
 
-      // Check User State
       window.addEventListener('DOMContentLoaded', async () => {
           const { data: { user } } = await _supabase.auth.getUser();
           updateUIState(user);
@@ -227,7 +477,6 @@
           }
       }
 
-      // Handle Login
       async function handleLogin() {
           const email = document.getElementById('authEmail').value;
           const password = document.getElementById('authPassword').value;
@@ -245,7 +494,6 @@
           }
       }
 
-      // Handle Signup
       async function handleSignUp() {
           const email = document.getElementById('authEmail').value;
           const password = document.getElementById('authPassword').value;
@@ -257,17 +505,18 @@
           if (error) {
               alert("Error: " + error.message);
           } else {
-              alert("Account Created! Check email for verification link.");
+              alert("Account ban gaya! Email verify karein.");
               toggleAuthModal(false);
           }
       }
 
-      // Logout User
       async function logoutUser() {
           await _supabase.auth.signOut();
-          alert("Logged out successfully.");
+          alert("Logout successful.");
           updateUIState(null);
       }
     </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
