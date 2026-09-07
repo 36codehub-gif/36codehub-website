@@ -546,3 +546,19 @@ body {
     .footer-content { grid-template-columns: 1fr; }
     .calc-summary { flex-direction: column; gap: 20px; text-align: center; }
 }
+// Check karein ki user logged in hai ya nahi
+async function checkUser() {
+  const { data: { user } } = await _supabase.auth.getUser();
+  if (user) {
+    console.log("Logged in user:", user.email);
+  } else {
+    // Agar logged in nahi hai toh login page par bhejein
+    // window.location.href = "login.html";
+  }
+}
+
+// Logout karne ke liye
+async function logout() {
+  await _supabase.auth.signOut();
+  window.location.href = "login.html";
+}
